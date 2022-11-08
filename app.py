@@ -1,8 +1,9 @@
-from flask import Flask, render_template, url_for, request
-import classify
-import pandas as pd
 import os
 
+import pandas as pd
+from flask import Flask, render_template, request, url_for
+
+import classify
 
 app = Flask(__name__)
 
