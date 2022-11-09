@@ -10,17 +10,16 @@ body,html{
     height: 100%;
     overflow: hidden;
     position: relative;
-    background-image: url(image.jpg);
+    background-image: url(image1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     justify-content: center;
-    animation: change 35s infinite ease-in-out;
 }
 .content{
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
@@ -37,8 +36,9 @@ body,html{
 }
 .content h1{
     color: #fff;
-    font-size: 60px;
+    font-size: 44px;
     letter-spacing: 15px;
+    padding-bottom: 20px;
 }
 .content h1 span{
     color: #fff;
@@ -55,8 +55,9 @@ body,html{
     color: #fff;
 }
 .content2{
-    position: absolute;
-    top: 0%;
+    color: white;
+    position: inherit;
+    top: 55%;
     left:0%
 }
 .content3{
@@ -82,7 +83,7 @@ body,html{
 .c{
     position: absolute;
     top: 7%;
-    left:35%
+    left:40%
 }
 .b1{
     position: absolute;

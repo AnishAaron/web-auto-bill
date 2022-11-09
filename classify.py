@@ -1,13 +1,16 @@
 import cv2
 from cvzone.ClassificationModule import Classifier
 
-item = []
 
-with open('bill.csv', 'w') as creating_new_csv_file: 
-   pass 
 
 def runprg():
+    item = []
+
+    with open('bill.csv', 'w') as creating_new_csv_file: 
+        pass
+
     cap = cv2.VideoCapture(1)
+
     myClassifier = Classifier('MyModel/keras_model.h5', 'MyModel/labels.txt')
     price = [0,1000,1500,20,40]
     w = 1
@@ -24,7 +27,7 @@ def runprg():
 
     while True:
         _, img = cap.read()
-        predictions, index = myClassifier.getPrediction(img, scale=1)
+        predictions, index= myClassifier.getPrediction(img, scale=1)
         name = myClassifier.list_labels[index]
         if (index == 0):
             w = 1
@@ -52,5 +55,3 @@ def runprg():
             entry = line.split(',')
         for i in range(0, len(item)):
             f.writelines(f'\n{item[i][0]},{item[i][1]},{item[i][2]}')
-
-    
